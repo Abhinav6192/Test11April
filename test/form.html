@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:th='http://www.thymeleaf.org'>
+<head>
+    <style>
+        .form {
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+        .title {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 14px;
+            color: #1a1a1a;
+            padding-bottom: 2px;
+        }
+        .field {
+            height: 30px;
+            width: 20%;
+            border: #1a1a1a solid 1px;
+            border-radius: 5px;
+        }
+        .element {
+            display: flex;
+            flex-direction: column;
+        }
+        .space {
+            margin-top: 24px;
+        }
+        .btnSpace {
+            margin-top: 32px;
+        }
+        .btnStyle {
+            height: 36px;
+            width: 20%;
+            color: #ffffff;
+            background-color: #0063e6;
+            font-size: 14px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .btnStyle:hover {
+            background-color: #f0f6ff;
+        }
+        ::placeholder {
+            color: #737373;
+        }
+    </style>
+</head>
+<div class="form">
+    <div class="element">
+        <label class="title" for="name">Name</label>
+        <input class="field" type="text" name="name" placeholder="Enter Name"/>
+    </div>
+    <div class="element space">
+        <label class="title" for="email">Email</label>
+        <input class="field" type="email" name="email" placeholder="Enter Email"/>
+    </div>
+    <div class="element space">
+        <label class="title" for="phone">Phone Number</label>
+        <input class="field" type="tel" name="phone" placeholder="Enter Phone Number"/>
+    </div>
+    <div class="element space">
+        <label class="title" for="password">Password</label>
+        <input class="field" type="password" name="password" placeholder="Enter Password"/>
+    </div>
+    <div class="element space">
+        <label class="title" for="confirmPwd">Confirm Password</label>
+        <input class="field" type="text" name="confirmPwd" placeholder="Confirm Password"/>
+    </div>
+    <button class="btnStyle btnSpace">SAVE</button>
+</div>
+</html>

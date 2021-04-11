@@ -1,0 +1,26 @@
+<div class="tableStucture">
+  <div class="row">
+    <div (click)="sortBy('name', sortName)" class="name headerItem bold">
+      <div>Product Name</div>
+      <span *ngIf="sortName === 'asc'" class="triangle-up"></span>
+      <span *ngIf="sortName === 'desc'" class="triangle-down"></span>
+    </div>
+    <div (click)="sortBy('price', sortPrice)" class="price headerItem bold">
+      <div>Price</div>
+      <span *ngIf="sortPrice === 'asc'" class="triangle-up"></span>
+      <span *ngIf="sortPrice === 'desc'" class="triangle-down"></span>
+    </div>
+    <div (click)="sortBy('category', sortCategory)" class="categ headerItem bold">
+      <div>Category</div>
+      <span *ngIf="sortCategory === 'asc'" class="triangle-up"></span>
+      <span *ngIf="sortCategory === 'desc'" class="triangle-down"></span>
+    </div>
+  </div>
+  <div class="itemStructure" *ngFor="let item of productData; let i = index" [ngStyle]="{ 'background-color': i%2 === 0 ? '#FFFFFF' : '#F7F7F7' }">
+    <div class="row">
+      <div class="name headerItem" [innerText]="item.productName"></div>
+      <div class="price headerItem">${{item.productPrice}}</div>
+      <div class="categ headerItem" [innerText]="item.productCategory"></div>
+    </div>
+  </div>
+</div>
